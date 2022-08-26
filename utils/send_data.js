@@ -1,7 +1,7 @@
 var Client = require('node-rest-client').Client;
 const print = require('./log');
 
-let count = 1;
+let count = 0;
 let response = ''
 
 exports.sendDataToIBLIS = function(urls, username, password){
