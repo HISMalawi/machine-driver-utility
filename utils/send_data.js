@@ -4,7 +4,7 @@ const print = require('./log');
 let count = 0;
 let response = ''
 
-exports.sendDataToIBLIS = function(urls, username, password){
+function sendDataToIBLIS(urls, username, password){
     let credentials = {
         user: username,
         password: password
@@ -12,10 +12,11 @@ exports.sendDataToIBLIS = function(urls, username, password){
     let client = new Client(credentials);
     if (urls.length > 0) {
         let url = urls[0];
-        urls.shift();
         var request = client.get(url, function(data, res){
 	        response = res;
+            urls.shift();
             print.log({request, urls, response, count});
+           
             if (urls.length > 0) {
                 sendDataToIBLIS(urls, username, password)
             }
@@ -27,3 +28,5 @@ exports.sendDataToIBLIS = function(urls, username, password){
         print.log({request, urls, response, count});
     }
 }
+
+module.exports = {sendDataToIBLIS}
