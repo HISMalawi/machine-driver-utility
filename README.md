@@ -1,8 +1,10 @@
 # machine-driver-utility
 Build IBLIS URLs from Lab machines and send data to IBLIS 
 
+Installing machine driver utility  
+```npm install @egpafmalawi/machine-driver-utility```
 ```// Import package
-var utils = require('@hismalawi/machine-driver-utility');
+var utils = require('@egpafmalawi/machine-driver-utility');
 
 // Build Urls
 let baseURL = 'http:localhost:8000/api/update_result';
