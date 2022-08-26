@@ -15,6 +15,7 @@ exports.sendDataToIBLIS = function(urls, username, password){
         urls.shift();
         var request = client.get(url, function(data, res){
 	        response = res;
+            print.log({request, urls, response, count});
             if (urls.length > 0) {
                 sendDataToIBLIS(urls, username, password)
             }
