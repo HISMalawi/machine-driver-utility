@@ -1,6 +1,6 @@
 {
   "name": "@egpafmalawi/machine-driver-utility",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Build urls for iblis and send data to iblis",
   "main": "index.js",
   "scripts": {
